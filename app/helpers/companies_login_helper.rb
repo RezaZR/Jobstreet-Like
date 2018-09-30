@@ -1,0 +1,2 @@
+module CompaniesLoginHelper
+end

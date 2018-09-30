@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+html
+  head
+    title HireMe
+    = csrf_meta_tags
+
+    meta charset="UTF-8" /
+    meta name="viewport" content="width=device-width, initial-scale=1.0" /
+    meta http-equiv="X-UA-Compatible" content="chrome=1" /
+    meta name="author" content="Kementrian Kesehatan Indonesia" /
+    meta name="description" content="Web Pusat Pendidikan dan Pelatihan Kementrian Kesehatan Republik Indonesia" /
+    meta name="keywords" content="pusdiklat kemenkes kementrian kesehatan RI indonesia" /
+    meta name="copyright" content="Kementrian Kesehatan Republik Indonesia" /
+    meta name="distribution" content="Global" /
+    meta name="rating" content="General" /
+
+    /meta name="robots" content="index, follow" /
+    /meta name="google-site-verification" content="CpVhxvqnJR6-GIBm9ApJMlbPi19U43042P33pRrErSs" /
+    
+    meta name="apple-mobile-web-app-capable" content="yes" /
+    meta content="yes" name="apple-touch-fullscreen" /
+    meta name="apple-mobile-web-app-status-bar-style" content="black" /
+    link rel="shortcut icon" href="images/logo-main.png" sizes=("16x16 24x24 32x32 48x48 64x64") /
+    = stylesheet_link_tag "application", media: "all"
+
+    = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    = javascript_include_tag "fontawesome-all.js"
+
+  body class=("#{controller_name} #{action_name}")
+    - if params[:controller] != "homes" && params[:controller] != "companies_login" && params[:controller] != "students_login"
+      header.header
+        .container
+          .row
+            .d-flex.centered-items
+              .col-6
+                .d-flex.justify-content-start
+                  - if params[:controller] == "students"
+                    <div class="dropdown">
+                      <button id="myBtn" class="dropbtn">
+                        .fas.fa-bell.fa-fw
+                        span 2
+                      </button>
+                      <div id="myDropdown" class="dropdown-content2">
+                        small 
+                          .fas.fa-envelope.fa-fw 
+                          | 17 Oktober 2018
+                        p Anda mendapatkan undangan interview dari Perusahaan A.
+                        small 
+                          .fas.fa-envelope.fa-fw 
+                          | 28 November 2018
+                        p Anda mendapatkan undangan interview dari Perusahaan B.
+                      </div>
+                    </div>
+              .col-6
+                .d-flex.justify-content-end
+                  a  href="/"
+                    .fas.fa-sign-out-alt.fa-fw
+
+    = yield
+
+    - if params[:controller] != "companies" && params[:controller] != "students" && params[:controller] != "companies_user" && params[:controller] != "companies_detail"
+      footer.footer
+        img src="images/bottom.png"/
+
+    = javascript_include_tag params[:controller]

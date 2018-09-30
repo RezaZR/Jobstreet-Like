@@ -1,0 +1,31 @@
+default: &default
+  adapter: postgresql
+  database: hireme
+  username: postgres
+  password: postgres
+  pool: 5
+  timeout: 5000
+
+development:
+  adapter: postgresql
+  database: hireme
+  username: postgres
+  password: postgres
+  pool: 5
+  timeout: 5000
+
+test:
+  adapter: postgresql
+  database: hireme
+  username: postgres
+  password: postgres
+  pool: 5
+  timeout: 5000
+
+production:
+  adapter: postgresql
+  database: hireme
+  username: postgres
+  password: postgres
+  pool: 5
+  timeout: 5000

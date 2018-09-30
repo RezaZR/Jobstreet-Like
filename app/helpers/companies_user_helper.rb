@@ -1,0 +1,2 @@
+module CompaniesUserHelper
+end
