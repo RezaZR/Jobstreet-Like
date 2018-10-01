@@ -20,7 +20,7 @@ html
     meta name="apple-mobile-web-app-capable" content="yes" /
     meta content="yes" name="apple-touch-fullscreen" /
     meta name="apple-mobile-web-app-status-bar-style" content="black" /
-    link rel="shortcut icon" href="images/logo-main.png" sizes=("16x16 24x24 32x32 48x48 64x64") /
+    link rel="shortcut icon" href="logo-main.png" sizes=("16x16 24x24 32x32 48x48 64x64") /
     = stylesheet_link_tag "application", media: "all"
 
     = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
@@ -60,6 +60,6 @@ html
 
     - if params[:controller] != "companies" && params[:controller] != "students" && params[:controller] != "companies_user" && params[:controller] != "companies_detail"
       footer.footer
-        img src="images/bottom.png"/
+        img src="bottom.png"/
 
     = javascript_include_tag params[:controller]
