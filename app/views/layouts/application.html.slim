@@ -60,6 +60,6 @@ html
 
     - if params[:controller] != "companies" && params[:controller] != "students" && params[:controller] != "companies_user" && params[:controller] != "companies_detail"
       footer.footer
-        img src="bottom.png"/
+        = image_tag("bottom.PNG")
 
     = javascript_include_tag params[:controller]
