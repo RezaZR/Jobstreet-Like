@@ -478,6 +478,7 @@ textarea {
 .dropdown1 {
     position: relative;
     display: inline-block;
+    width: 100%;
 }
 
 .dropdown span {
@@ -889,5 +890,142 @@ textarea {
         & button {
             margin: 0 .25em;
         }
+    }
+}
+
+@media only screen and (min-device-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {
+    .login {
+        &__form {
+            width: 30%;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    .home {
+        &__button {
+            width: 40%;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    .company {
+        &__details {
+            background: #f5f5f5;
+            border-bottom: 1px solid #b4b4b4;
+            &__logo {
+                max-width: 100px;
+                max-height: 100px;
+                display: block;
+                margin: 0 auto;
+            }
+            &__info {
+                &__content {
+                    font-size: 16px;
+                    & label {
+                        width: 20%;
+                    }
+                    & p {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+        &__list {
+            font-size: 22px;
+            &__input {
+                input,
+                button {
+                    border: 1px solid #b4b4b4;
+                }
+            }
+            &__review {
+                &__student {
+                    border-bottom: 1px solid #b4b4b4;
+                    &:hover {
+                        background-color: #f5f5f5;
+                        cursor: pointer;
+                    }
+                    & img {
+                        max-width: 50px;
+                    }
+                }
+            }
+        }
+    }
+    .companies-user {
+        &__img {
+            border-bottom: 1px solid #b4b4b4;
+        }
+        &__info {
+            border-radius: 5px;
+            width: 70%;
+            display: block;
+            margin: 0 auto;
+            padding: 1em;
+            border: 1px solid #b4b4b4;
+            overflow: hidden;
+            font-size: 18px;
+            &__content {
+                & label {
+                    padding: 0 1em;
+                    text-align: right;
+                }
+                &--divider {
+                    & label {
+                        padding: 0 1em;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+    .companies-detail {
+        &__details {
+            background: #f5f5f5;
+            &__logo {
+                & img {
+                    max-width: 100px;
+                }
+            }
+            &__info {
+                &__content {
+                    font-size: 16px;
+                    & label {
+                        width: 10%;
+                    }
+                    & p {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+        &__portofolio {
+            padding: 2em 4em;
+            width: 70%;
+            margin: 0 auto;
+            display: block;
+            &__body {
+                overflow: hidden;
+                display: block;
+                margin: 1em 0;
+                text-align: center;
+                & h2 {
+                    font-display: 24px;
+                    margin-bottom: .5em;
+                }
+            }
+        }
+    }
+    .modal-content {
+        width: 50%;
+        border-radius: 5px;
+        text-align: center;
+        & p {
+            font-size: 22px;
+        }
+    }
+    .dropbtn,
+    .dropbtn1 {
+        width: unset;
     }
 }
